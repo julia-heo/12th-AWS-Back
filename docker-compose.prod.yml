@@ -14,7 +14,6 @@ services:
     volumes:
       - static:/home/app/web/static
       - media:/home/app/web/media
-      - /etc/letsencrypt:/etc/letsencrypt
     expose:
       - 8000
     entrypoint:
@@ -27,6 +26,7 @@ services:
     volumes:
       - static:/home/app/web/static
       - media:/home/app/web/media
+      - /etc/letsencrypt:/etc/letsencrypt
     ports:
       - "80:80"
     depends_on:
